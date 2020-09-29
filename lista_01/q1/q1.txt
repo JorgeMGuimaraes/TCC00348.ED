@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+proximo_primo(int inicio);
+
+int x(void) {
+    int n, i;
+    int _ = scanf("%d", &n);
+    while (n > 0) {
+        int* p;
+        int lista[n];
+        int inicio = 2;
+        for (i = 0; i < n; i++) {
+            lista[i]    = proximo_primo(inicio);
+            inicio      = ++lista[i];
+        }
+
+        for (i = 0; i < n; i++) {
+            printf("-> lista[%d]: %d\n", i, lista[i]);
+        }
+
+        scanf("%d", &n);
+    }
+
+    return 0;
+}
+
+int proximo_primo(int inicio) {
+    int i;
+    i = inicio / 2;
+    return 0;
+}
