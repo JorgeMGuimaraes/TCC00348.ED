@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifndef TLSE_H
+#define TLSE_H
+
 typedef struct lse{
   int info;
   struct lse *prox;
@@ -17,3 +20,5 @@ void implrecrev(TLSE *l);
 void liblrec(TLSE *l);
 TLSE* buscalrec(TLSE *l, int elem);
 TLSE* retlrec(TLSE *l, int elem);
+
+#endif

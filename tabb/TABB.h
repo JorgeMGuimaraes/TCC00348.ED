@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifndef TABB_H
+#define TABB_H
+
 typedef struct arvbinbusca{
     int info;
     struct arvbinbusca *esq, *dir;
@@ -12,3 +15,5 @@ void TABB_libera(TABB* t);
 TABB* TABB_busca(int e, TABB* t);
 TABB* TABB_insere(int e, TABB* t);
 TABB* TABB_retira(int e, TABB *t);
+
+#endif
