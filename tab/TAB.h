@@ -1,17 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #ifndef TAB_H
 #define TAB_H
 
-typedef struct arvbin{
-    int info;
-    struct arvbin *esq, *dir;
-}TAB;
+#include <stdio.h>
+#include <stdlib.h>
 
-TAB* TAB_cria(int x, TAB* e, TAB* d);
-void TAB_imprime(TAB *t);
-void TAB_libera(TAB* t);
-TAB* TAB_busca(int e, TAB* t);
+typedef struct arvore_binaria {
+    int info;
+    struct arvore_binaria *esquerda, *direita;
+} TAB;
+
+void TAB_liberar(TAB* node);
+TAB* TAB_buscar(int valor, TAB* node);
+void TAB_imprimir(TAB* node);
+
+
+TAB* TAB_criar(int valor, TAB* esquerda, TAB* direita);
 
 #endif
