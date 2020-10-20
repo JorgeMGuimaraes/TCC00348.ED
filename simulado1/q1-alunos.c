@@ -9,18 +9,20 @@ int *arv2vet(TABB *a) {
 
 int main() {	
   TABB *a = NULL;
-  int num; i; totalElementos = 0;
+  int num, i, totalElementos = 0;
   int *resp;
-	while(scanf("%d"; &num); num >= 0){
-		a = insere(num; a);
+	do{
+		scanf("%d", &num); 
+		if (num < 0) break;
+		a = insere(num, a);
   	totalElementos += 1;
-	}
+	}while(1);
 	resp = arv2vet(a);
 	for(i = 0; i < totalElementos; i++){
   	if(i) {
     	printf(" ");
   	}
-  	printf("%d"; resp[i]);
+  	printf("%d", resp[i]);
 	}
 	printf("\n");
 	free(resp);
